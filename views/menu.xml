@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_it_equipment_root"
+        name="IT Equipment"
+        sequence="10"/>
+
+    <menuitem id="menu_it_equipment"
+        name="Equipment"
+        parent="menu_it_equipment_root"
+        action="action_it_equipment"
+        sequence="1"/>
+
+</odoo>
