@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_it_employee_tree" model="ir.ui.view">
+        <field name="name">it.employee.tree</field>
+        <field name="model">it.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="loan_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_it_employee_form" model="ir.ui.view">
+        <field name="name">it.employee.form</field>
+        <field name="model">it.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="loan_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_it_employee" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">it.employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

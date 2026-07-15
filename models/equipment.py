@@ -4,7 +4,7 @@ class ItEquipment(models.Model):
     _name = "it.equipment"
     _description = "IT Equipment"
 
-    name = fields.Char(string="Name")
+    name = fields.Char(string="Nom")
 
     equipment_type = fields.Selection([
         ('pc', 'PC'),
@@ -24,3 +24,9 @@ class ItEquipment(models.Model):
     purchase_date = fields.Date(string="Date d'achat")
 
     notes = fields.Text(string="Notes")
+
+    loan_ids = fields.One2many(
+        "it.loan",
+        "equipment_id",
+        string="Prêt"
+    )

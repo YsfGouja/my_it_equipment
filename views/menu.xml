@@ -6,9 +6,21 @@
         sequence="10"/>
 
     <menuitem id="menu_it_equipment"
-        name="Equipment"
+        name="Materiels"
         parent="menu_it_equipment_root"
         action="action_it_equipment"
+        sequence="1"/>
+
+    <menuitem id="menu_it_employees"
+        name="Employés"
+        parent="menu_it_equipment_root"
+        action="action_it_employee"
+        sequence="1"/>
+
+    <menuitem id="menu_it_loans"
+        name="Prêt"
+        parent="menu_it_equipment_root"
+        action="action_it_loan"
         sequence="1"/>
 
 </odoo>
