@@ -4,7 +4,11 @@
     'category': 'Tools',
     'summary': 'Simple equipment management',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/equipment_views.xml',
+        'views/menu.xml',
+    ],
     'installable': True,
     'application': False,
     'sequence':-100,

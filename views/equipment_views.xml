@@ -8,7 +8,7 @@
             <tree
                 decoration-success="state == 'disponible'"
                 decoration-warning="state == 'prete'"
-                decoration-danger="state == 'en_panne'">  <!-- This was purely for visuals-->  
+                decoration-danger="state == 'en_panne'">        
 
                 <field name="name"/>
                 <field name="equipment_type"/>
