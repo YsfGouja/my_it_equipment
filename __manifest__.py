@@ -5,11 +5,13 @@
     'summary': 'Simple equipment management',
     'depends': ['base'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/equipment_views.xml',
         'views/employee_views.xml',
         'views/loans_views.xml',
         'views/menu.xml',
+        
     ],
     'installable': True,
     'application': False,

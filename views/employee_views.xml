@@ -10,6 +10,7 @@
                 <field name="email"/>
                 <field name="phone"/>
                 <field name="loan_ids"/>
+                <field name="user_id"/>
             </tree>
         </field>
     </record>
@@ -22,9 +23,10 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="email"/>
-                        <field name="phone"/>
+                        <field name="email" widget="email"/>
+                        <field name="phone" widget="phone"/>
                         <field name="loan_ids"/>
+                        <field name="user_id"/>
                     </group>
                 </sheet>
             </form>

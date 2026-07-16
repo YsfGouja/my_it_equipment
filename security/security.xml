@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="group_it_manager" model="res.groups">
+        <field name="name">IT Manager</field>
+    </record>
+
+    <record id="rule_it_loan_own" model="ir.rule">
+        <field name="name">Own Loans</field>
+        <field name="model_id" ref="model_it_loan"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">
+            [('employee_id.user_id', '=', user.id)]
+        </field>
+    </record>
+
+    <record id="rule_it_loan_manager_all" model="ir.rule">
+        <field name="name">All Loans - IT Manager</field>
+        <field name="model_id" ref="model_it_loan"/>
+        <field name="groups" eval="[(4, ref('group_it_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+
+</odoo>

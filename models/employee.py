@@ -13,3 +13,8 @@ class ItEmployee(models.Model):
         "employee_id",
         string="Prêt"
     )
+
+    user_id = fields.Many2one(
+        "res.users",
+        string="Utilisateur"
+    )
