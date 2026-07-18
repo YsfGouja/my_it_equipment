@@ -1,4 +1,6 @@
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
+from datetime import date
 
 class ItEquipment(models.Model):
     _name = "it.equipment"
@@ -30,3 +32,28 @@ class ItEquipment(models.Model):
         "equipment_id",
         string="Prêt"
     )
+
+    def action_mark_loaned(self):
+        for record in self:
+            record.state = "prete"
+
+    def action_mark_returned(self):
+        for record in self:
+            record.state = "disponible"
+
+    days_since_purchase = fields.Integer(
+        string="Jours depuis l'achat",
+        compute="_compute_days_since_purchase"
+    )
+
+    @api.depends("purchase_date")
+    def _compute_days_since_purchase(self):
+        today = date.today()
+
+        for record in self:
+            if record.purchase_date:
+                record.days_since_purchase = (
+                    today - record.purchase_date
+                ).days
+            else:
+                record.days_since_purchase = 0

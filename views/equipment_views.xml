@@ -8,7 +8,7 @@
             <tree
                 decoration-success="state == 'disponible'"
                 decoration-warning="state == 'prete'"
-                decoration-danger="state == 'en_panne'">        
+                decoration-danger="state == 'en_panne'">
 
                 <field name="name"/>
                 <field name="equipment_type"/>
@@ -25,6 +25,20 @@
         <field name="model">it.equipment</field>
         <field name="arch" type="xml">
             <form>
+
+                <header>
+                    <button
+                        name="action_mark_loaned"
+                        string="Marquer comme prêté"
+                        type="object"
+                        class="btn-primary"/>
+
+                    <button
+                        name="action_mark_returned"
+                        string="Marquer comme retourné"
+                        type="object"/>
+                </header>
+
                 <sheet>
                     <group>
                         <field name="name"/>
@@ -32,9 +46,11 @@
                         <field name="serial_number"/>
                         <field name="state"/>
                         <field name="purchase_date"/>
+                        <field name="days_since_purchase" readonly="1"/>
                         <field name="notes"/>
                     </group>
                 </sheet>
+
             </form>
         </field>
     </record>

@@ -1,4 +1,5 @@
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class ItLoan(models.Model):
     _name = "it.loan"
@@ -21,3 +22,11 @@ class ItLoan(models.Model):
     return_date = fields.Date(
         string="Date de Retour"
     )
+
+    @api.constrains("equipment_id")
+    def _check_broken_equipment(self):
+        for record in self:
+            if record.equipment_id.state == "en_panne":
+                raise ValidationError(
+                    "Broken equipment cannot be loaned."
+                )
