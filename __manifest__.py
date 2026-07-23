@@ -13,6 +13,9 @@
         'views/menu.xml',
         
     ],
+    'demo': [
+        'demo/equipment_demo.xml',
+    ],
     'installable': True,
     'application': False,
     'sequence':-100,

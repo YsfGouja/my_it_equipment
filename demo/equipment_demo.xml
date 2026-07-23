@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="equipment_1" model="it.equipment">
+        <field name="name">Dell Latitude</field>
+        <field name="equipment_type">pc</field>
+        <field name="state">disponible</field>
+    </record>
+
+    <record id="equipment_2" model="it.equipment">
+        <field name="name">HP EliteBook</field>
+        <field name="equipment_type">pc</field>
+        <field name="state">prete</field>
+    </record>
+
+    <record id="equipment_3" model="it.equipment">
+        <field name="name">Samsung Monitor</field>
+        <field name="equipment_type">ecran</field>
+        <field name="state">disponible</field>
+    </record>
+
+    <record id="equipment_4" model="it.equipment">
+        <field name="name">Sony Headset</field>
+        <field name="equipment_type">casque</field>
+        <field name="state">en_panne</field>
+    </record>
+
+    <record id="equipment_5" model="it.equipment">
+        <field name="name">Logitech Headset</field>
+        <field name="equipment_type">casque</field>
+        <field name="state">prete</field>
+    </record>
+
+</odoo>
