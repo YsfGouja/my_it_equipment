@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="loan_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <h2>Rapport de Prêt</h2>
+
+                        <p>
+                            <strong>Équipement:</strong>
+                            <span t-field="o.equipment_id"/>
+                        </p>
+
+                        <p>
+                            <strong>Employé:</strong>
+                            <span t-field="o.employee_id"/>
+                        </p>
+
+                        <p>
+                            <strong>Date de Prêt:</strong>
+                            <span t-field="o.loan_date"/>
+                        </p>
+
+                        <p>
+                            <strong>Date de Retour:</strong>
+                            <span t-field="o.return_date"/>
+                        </p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

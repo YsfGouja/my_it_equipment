@@ -11,7 +11,8 @@
         'views/employee_views.xml',
         'views/loans_views.xml',
         'views/menu.xml',
-        
+        'reports/loan_report.xml',
+        'reports/loan_report_template.xml',
     ],
     'demo': [
         'demo/equipment_demo.xml',
