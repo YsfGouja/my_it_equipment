@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_it_equipment_user,it.equipment.user,model_it_equipment,,1,1,1,1
-access_it_equipment,it.equipment,model_it_equipment,,1,1,1,1
-access_it_employee,it.employee,model_it_employee,,1,1,1,1
-access_it_loan,it.loan,model_it_loan,,1,1,1,1
-access_it_loan_manager,it.loan.manager,model_it_loan,my_it_equipment.group_it_manager,1,1,1,1
+access_it_equipment_user,it.equipment.user,model_it_equipment,base.group_user,1,1,1,0
 access_it_equipment_manager,it.equipment.manager,model_it_equipment,my_it_equipment.group_it_manager,1,1,1,1
+access_it_employee_user,it.employee.user,model_it_employee,base.group_user,1,1,1,0
+access_it_employee_manager,it.employee.manager,model_it_employee,my_it_equipment.group_it_manager,1,1,1,1
+access_it_loan_user,it.loan.user,model_it_loan,base.group_user,1,1,1,0
+access_it_loan_manager,it.loan.manager,model_it_loan,my_it_equipment.group_it_manager,1,1,1,1

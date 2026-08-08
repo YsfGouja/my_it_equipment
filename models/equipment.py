@@ -35,6 +35,10 @@ class ItEquipment(models.Model):
 
     def action_mark_loaned(self):
         for record in self:
+            if record.state == "en_panne":
+                raise ValidationError(
+                    "Broken equipment cannot be loaned."
+                )
             record.state = "prete"
 
     def action_mark_returned(self):
